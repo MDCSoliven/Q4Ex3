@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Centimeters to Feet Converter</title>
+</head>
+<body>
+	 <h1>Cm to Ft Converter</h1>
+	<form>
+         <label for="cm">Length in Centimeters:</label>
+         <input type="number" id="cm" name="cm"><br><br>
+         <input type="button" value="Convert" onclick="convertCmtoFt()">
+     </form>
+     <p id="result"></p>
+     <script>
+           function convertCmtoFt() {
+              const cm = document.getElementByID("cm").value
+              const ft = cm / 30.48; // 1 foot = 30.48 centimeters
+              document.getElementById("result").innerHTML = `${cm} centimeters is equal to ${ft.toFixed(2)} feet.`;
+          }
+</script>
+</body>
+</html>
